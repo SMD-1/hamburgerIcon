@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background: #000;
+    --barbg: red;
+}
+body{
+    background: var(--background);
+
+}
+.toggle{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    /* border: 1px solid #fff; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.toggle span{
+    position: relative;
+    width: 36px;
+    height: 4px;
+    background: var(--barbg);
+    margin: 8px;
+    display: block;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.toggle span:nth-child(1){
+    transform-origin: left;
+}
+.toggle span:nth-child(2){
+    transform-origin: center;
+    width: 26px;
+}
+.toggle span:nth-child(3){
+    transform-origin: left;
+    width: 20px;
+}
+.toggle.change span:nth-child(1){
+    transform: rotate(45deg);
+    left: 2px;
+}
+.toggle.change span:nth-child(2){
+    transform: rotate(315deg);
+    /* transform: rotate(-45deg); */
+    right: 3px;
+    width: 36px;
+}
+.toggle.change span:nth-child(3){
+    transform: scaleX(0);
+    width: 36px;
+}
+
+
+
+
+
